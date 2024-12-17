@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ER-Chen Diagram Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Azunera's ER-Chen Diagram Creator</h1>
+    <p>Project still on Beta, don't mind 🪲!, I'm working on insecticide</p>
+    <div class="toolbar", id="toolbar">
+        <button id="addEntity">Add Entity</button>
+        <button id="addAttribute">Add Attribute</button>
+        <button id="addRelationship">Add Relationship</button>
+        <button id="line_mode">Lines mode</button>
+        <button id="addText">Add text</button>
+        <div id="export-dropdown">
+            <button id="export-button">Export</button>
+            <div id="export-dropdown-content">
+                <a href="#" id="savePng">Save as PNG</a>
+                <a href="#" id="saveJpeg">Save as JPEG</a>
+                <a href="#" id="saveSvg">Save as SVG</a>
+            </div>
+        </div>
+
+
+    </div>
+        <svg id="mother_svg" width="1500" height="950" xmlns="http://www.w3.org/2000/svg">
+            <g id="main_svg"></g>
+            <g id="selector_svg"></g>
+    </svg> 
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

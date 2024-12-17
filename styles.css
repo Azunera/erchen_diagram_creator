@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #eee; /*used to be #f7f9fc*/
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar {
+    margin: 20px 0;
+}
+
+#mother_svg {
+    border: 2px solid black;  
+}
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #eeeeee;  /*used to be d8e3e7*/
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dbdbdb; /*used to be b0c4de*/
+}
+
+.diagram-area {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #ffffff;
+    border: 2px solid #d8e3e7;
+    margin: auto;
+    overflow: hidden;
+}
+
+.entity, .attribute, .relationship {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f4f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+}
+
+.entity {
+    border: 2px solid #a6c1ee;
+}
+
+.attribute {
+    border: 2px solid #f9a826;
+}
+
+.relationship {
+    border: 2px solid #6fcf97;
+}
+
+.line {
+    padding: 400px;
+}
+div:focus {
+    outline: none; 
+}
+
+#resizer_a {
+    cursor: nw-resize; 
+  }
+
+#resizer_b {
+cursor: ne-resize;
+}
+
+#resizer_c {
+cursor: se-resize;
+}
+#resizer_d {
+cursor: sw-resize;
+}
+
+.closed_shape {
+cursor: all-scroll;
+
+}
+
+.foreignobj_container {
+    pointer-events: none;
+}
+.text_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure full width available */
+    height: 100%; /* Ensure full height available */
+    pointer-events: none;
+}
+
+.text {
+    pointer-events: none;
+    text-align: center; 
+    line-height: 1.2; 
+}
+
+#export-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#export-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #eeeeee;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#export-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b2b2b2;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+#export-dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+#export-dropdown-content a:hover {
+    background-color: #dbdbdb;
+}
