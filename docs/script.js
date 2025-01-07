@@ -835,7 +835,7 @@ class Line_Resizer extends Shape {
         this.originY = this.y || 0
 
         this.line = shapes_map.get(Number(line_selector[0]))
-        line_mode_togglign() 
+        line_mode_toggling() 
         highlighted_line = this.line;
         highlighted_side = this.side;
         
@@ -867,7 +867,7 @@ class Line_Resizer extends Shape {
         highlighted_side = null;
         this.isDragging = false;
 
-        line_mode_togglign()
+        line_mode_toggling()
     }
 }
 
@@ -1117,12 +1117,12 @@ document.getElementById('addRelationship').addEventListener('click', () => {
 
 document.getElementById('line_mode').addEventListener('click', () => {
 
-    line_mode_togglign() 
+    line_mode_toggling() 
 
 });
 
 
-function line_mode_togglign() {
+function line_mode_toggling() {
     function toggleTextInteractivity(enable) {
         const textElements = document.querySelectorAll('.text');
         textElements.forEach(textElement => {
@@ -1236,7 +1236,7 @@ mother_svg.addEventListener('mousedown', (e) => {
 
     if (!line_mode || svg.contains(event.target)) return
     
-        
+    
     
     isDrawing = true;
 
@@ -1267,15 +1267,15 @@ mother_svg.addEventListener('mousemove', (e) => {
 });
 
 
-mother_svg.addEventListener('mouseup', () => {
+mother_svg.addEventListener('mouseup', (event) => {
     
-    if (selected_line_connector != null && svg.contains(event.target)) {
-        
+    if (selected_line_connector != null && !svg.contains(event.target)) {
+        console.log('T')
         if (highlighted_line == null) {
 
             let last_polygon_data = line_connectors_map.get(selected_line_connector);
             let first_polygon_data = line_connectors_map.get(first_connection_point);
-
+            console.log(last_polygon_data, first_polygon_data, ';aaa')
             if (last_polygon_data != null && first_polygon_data != null) {
                     connect(shapes_map.get(first_polygon_data[0]), first_polygon_data[1], shapes_map.get(last_polygon_data[0]), last_polygon_data[1])
                     currentLine.remove()
